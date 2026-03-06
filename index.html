@@ -3,6 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="styles.css" />
 		<title>Accessible Design Co.</title>
 	</head>
@@ -10,6 +16,8 @@
 	<body>
 		<header role="banner">
 			<img
+				href="#home"
+				id="company-logo"
 				src="https://teaching.pitt.edu/wp-content/uploads/2024/03/accessibility-header.jpg"
 				alt="Different symbols of accessibilty ie tty, sign language, braille, etc"
 			/>
@@ -25,24 +33,26 @@
 		<main class="main">
 			<section class="section1" id="home">
 				<img
-					id="company-logo"
-					id="heroBackground"
+					id="herosectionimg"
 					src="/SBAResponsiveAccessibleWebPage/herosectionimg.jpg"
 					alt="A inclusive community gathering in watercolor "
 				/>
-				<h1>Changing the web with each line of code</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
-					tempora eos voluptatibus nemo, officiis laboriosam modi! Doloremque
-					sapiente magni corrupti, vel alias voluptatum eveniet neque possimus
-					natus perferendis magnam ratione!
-				</p>
-				<button role="button" aria-label="Click to connect with the company">
-					Connect with US!
-				</button>
+				<div id="heroWrapper">
+					<h1 id="heroTitle">Changing the web with each line of code</h1>
+					<p id="heroSummary">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+					<button
+						id="callToAction"
+						role="button"
+						aria-label="Click to connect with the company"
+					>
+						Connect with US!
+					</button>
+				</div>
 			</section>
 			<section class="section2" id="about">
-				<h2>Accessible Design Co</h2>
+				<h2><a href="#about"> Accessible Design Co.</a></h2>
 				<p>
 					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium,
 					velit beatae? Repellendus doloribus saepe possimus sit reprehenderit?
@@ -63,10 +73,11 @@
 					libero pariatur assumenda corrupti?
 				</p>
 			</section>
+			<h3><a href="#service">Services we offer</a></h3>
 			<section class="grid-container section3" id="services">
 				<div class="items item1" style="grid-area: box1">
-					<!-- <figure class="serviceCard"> -->
 					<img
+						height="300px"
 						src="https://openpracticelibrary.com/images/code-review.png"
 						alt="a person with a magnifying glass review lines of code"
 					/>
@@ -74,10 +85,8 @@
 					<button role="button" aria-label="Click to add to cart">
 						Add to Cart
 					</button>
-					<!-- </figure> -->
 				</div>
 				<div class="items item2" style="grid-area: box2">
-					<!-- <figure class="service-card"> -->
 					<img
 						src="https://www.familyhandyman.com/wp-content/uploads/2021/03/home-document-filing-GettyImages-487081216.jpg?fit=750%2C750"
 						alt="a person with a magnifying glass review lines of code"
@@ -86,44 +95,36 @@
 					<button role="button" aria-label="Click to add to cart">
 						Add to Cart
 					</button>
-					<!-- </figure> -->
 				</div>
 				<div class="items item3" style="grid-area: box3">
-					<!-- <figure class="serviceCard"> -->
 					<img
-						src="https://openpracticelibrary.com/images/code-review.png"
+						src="https://webberofficial.com/wp-content/uploads/2023/11/anime-style-gaming-consoles.png"
 						alt="a person with a magnifying glass review lines of code"
 					/>
 					<p>Games</p>
 					<button role="button" aria-label="Click to add to cart">
 						Add to Cart
 					</button>
-					<!-- </figure> -->
 				</div>
 				<div class="items item4" style="grid-area: box4">
-					<!-- <figure class="serviceCard"> -->
 					<img
-						src="https://openpracticelibrary.com/images/code-review.png"
+						src="https://wallpapers.com/images/featured-full/developer-png-9wxnnbpbatv5o2dn.png"
 						alt="a person with a magnifying glass review lines of code"
 					/>
-					<p>Code Review</p>
+					<p>Build a Website</p>
 					<button>Add to Cart</button>
-					<!-- </figure> -->
 				</div>
 				<div class="items item5" style="grid-area: box5">
-					<!-- <figure class="serviceCard"> -->
 					<img
-						src="https://openpracticelibrary.com/images/code-review.png"
-						alt="a person with a magnifying glass review lines of code"
+						src="https://clipart-library.com/img/2030890.gif"
+						alt="an open book with read written over the pages"
 					/>
-					<p>Code Review</p>
+					<p>Reading</p>
 					<button role="button" aria-label="Click to add to cart">
 						Add to Cart
 					</button>
-					<!-- </figure> -->
 				</div>
 				<div class="items item6" style="grid-area: box6">
-					<!-- <figure class="serviceCard"> -->
 					<img
 						src="https://openpracticelibrary.com/images/code-review.png"
 						alt="a person with a magnifying glass review lines of code"
@@ -132,7 +133,6 @@
 					<button role="button" aria-label="Click to add to cart">
 						Add to Cart
 					</button>
-					<!-- </figure> -->
 				</div>
 			</section>
 			<section class="section4" id="contact">
