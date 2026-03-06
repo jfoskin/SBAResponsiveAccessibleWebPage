@@ -3,18 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
 		<title>Accessible Design Co.</title>
 	</head>
+
 	<body>
-		<header>
+		<header role="banner">
 			<img
 				src="https://teaching.pitt.edu/wp-content/uploads/2024/03/accessibility-header.jpg"
 				alt="Different symbols of accessibilty ie tty, sign language, braille, etc"
 			/>
-			<nav role="navigation">
+			<nav class="navbar" role="navigation">
 				<ul>
 					<li><a href="#">Home</a></li>
-					<li><a href="#about"></a>About</li>
+					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -23,6 +25,7 @@
 		<main class="main">
 			<section class="section1" id="home">
 				<img
+					id="company-logo"
 					id="heroBackground"
 					src="/SBAResponsiveAccessibleWebPage/herosectionimg.jpg"
 					alt="A inclusive community gathering in watercolor "
@@ -34,7 +37,9 @@
 					sapiente magni corrupti, vel alias voluptatum eveniet neque possimus
 					natus perferendis magnam ratione!
 				</p>
-				<button>Connect with US!</button>
+				<button role="button" aria-label="Click to connect with the company">
+					Connect with US!
+				</button>
 			</section>
 			<section class="section2" id="about">
 				<h2>Accessible Design Co</h2>
@@ -59,23 +64,100 @@
 				</p>
 			</section>
 			<section class="grid-container section3" id="services">
-				<div class="items item1"></div>
-				<div class="items item2"></div>
-				<div class="items item3"></div>
-				<div class="items item4"></div>
-				<div class="items item5"></div>
-				<div class="items item6"></div>
+				<div class="items item1" style="grid-area: box1">
+					<!-- <figure class="serviceCard"> -->
+					<img
+						src="https://openpracticelibrary.com/images/code-review.png"
+						alt="a person with a magnifying glass review lines of code"
+					/>
+					<p>Code Review</p>
+					<button role="button" aria-label="Click to add to cart">
+						Add to Cart
+					</button>
+					<!-- </figure> -->
+				</div>
+				<div class="items item2" style="grid-area: box2">
+					<!-- <figure class="service-card"> -->
+					<img
+						src="https://www.familyhandyman.com/wp-content/uploads/2021/03/home-document-filing-GettyImages-487081216.jpg?fit=750%2C750"
+						alt="a person with a magnifying glass review lines of code"
+					/>
+					<p>Document Assistance</p>
+					<button role="button" aria-label="Click to add to cart">
+						Add to Cart
+					</button>
+					<!-- </figure> -->
+				</div>
+				<div class="items item3" style="grid-area: box3">
+					<!-- <figure class="serviceCard"> -->
+					<img
+						src="https://openpracticelibrary.com/images/code-review.png"
+						alt="a person with a magnifying glass review lines of code"
+					/>
+					<p>Games</p>
+					<button role="button" aria-label="Click to add to cart">
+						Add to Cart
+					</button>
+					<!-- </figure> -->
+				</div>
+				<div class="items item4" style="grid-area: box4">
+					<!-- <figure class="serviceCard"> -->
+					<img
+						src="https://openpracticelibrary.com/images/code-review.png"
+						alt="a person with a magnifying glass review lines of code"
+					/>
+					<p>Code Review</p>
+					<button>Add to Cart</button>
+					<!-- </figure> -->
+				</div>
+				<div class="items item5" style="grid-area: box5">
+					<!-- <figure class="serviceCard"> -->
+					<img
+						src="https://openpracticelibrary.com/images/code-review.png"
+						alt="a person with a magnifying glass review lines of code"
+					/>
+					<p>Code Review</p>
+					<button role="button" aria-label="Click to add to cart">
+						Add to Cart
+					</button>
+					<!-- </figure> -->
+				</div>
+				<div class="items item6" style="grid-area: box6">
+					<!-- <figure class="serviceCard"> -->
+					<img
+						src="https://openpracticelibrary.com/images/code-review.png"
+						alt="a person with a magnifying glass review lines of code"
+					/>
+					<p>Code Review</p>
+					<button role="button" aria-label="Click to add to cart">
+						Add to Cart
+					</button>
+					<!-- </figure> -->
+				</div>
 			</section>
 			<section class="section4" id="contact">
 				<form action="">
-					<label for=""></label>
-					<input type="text">
-					<label for=""></label>
-					<input type="text">
-					<label for=""></label>
-					<input type="text">
-					<label for=""></label>
-					<textarea type="text">
+					<label for="nameInput" aria-label="Enter Name">Name:</label>
+					<input type="text" id="nameInput" required aria-required /> <br />
+					<label for="email" aria-label="Enter email this is a required"
+						>Email:</label
+					>
+					<input type="email" id="email" name="email" aria-required required />
+					<br />
+					<label for="subject" aria-label="Enter the Subject of your message"
+						>Subject:</label
+					>
+					<input type="text" name="subject" />
+					<br />
+					<label for="messageBox" aria-label="Enter your message"
+						>Message:
+					</label>
+					<textarea
+						type="text"
+						name="messageBox"
+						required
+						aria-required
+					></textarea>
 				</form>
 			</section>
 		</main>
